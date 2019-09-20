@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function SetSize(url, id, width, height, uimode) {
+  id = document.getElementById(id);
+  if (is_ie) {
+   id.width = width;
+   id.height = height;
+   id.uimode = uimode;
+  } else {
+     document.getElementById('player').innerHTML = create(url, width, height, uimode);
+  }
+ }
+</script>
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div id="player" align="center">
+   <script type="text/javascript">
+    document.getElementById('player').innerHTML = create('', 340, 325, 'full'); 
+   </script> 
+  </div>
+      <table align="center" style="height: 80px; margin-bottom: 0px; margin-top: 0px;">
+       
+      <colgroup>
+         <td style="height: 30px; width: 138px;">
+   <form method="get" action="javascript:SetSize('', 'player', 150, 175, 'full')" style="height: 30px; margin-bottom: 0px">
+           <input type="submit" value="Small" name="B1" style="height: 30px; margin-bottom: 0px; width: 135px;"/></form>
+           </td>
+         <td style="height: 30px; width: 138px;">
+   <form method="get" action="javascript:SetSize('', 'player', 340, 325, 'full')" style="height: 30px; margin-bottom: 0px">
+           <input type="submit" value="Medium" name="B2" style="margin-bottom: 0px; width: 135px; height: 30px;"/>
+           </form>
+           </td>
+         <td style="height: 30px ; width: 138px;">
+     <form method="get" action="javascript:SetSize('', 'player', 650, 555, 'full')" style="height: 30px; margin-bottom: 0px">
+           <input type="submit" value="Large" name="B3" style="width: 135px; height: 30px; margin-bottom: 0px;"/></form>
+           </td>
+       </colgroup>
+       </table>
+
+</body>
+</html>
